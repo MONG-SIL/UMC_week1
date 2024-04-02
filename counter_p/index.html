@@ -1,0 +1,30 @@
+<!DOCTYPE html>  <head>
+    <title>Counter</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h1 id="number">0</h1>
+    <div>
+        <button id="increase">+1</button>
+        <button id="decrease">-1</button>
+    </div>
+    <script>
+      let counter = 0
+      const number = document.getElementById("number");
+      const increase =  document.getElementById("increase");
+      const decrease =  document.getElementById("decrease");
+      function increaseonClick(){
+        counter = counter+1
+        number.innerHTML = counter
+      }
+      function decreaseonClick(){
+        counter = counter-1
+        number.innerHTML = counter
+      }
+      increase.addEventListener("click",increaseonClick);
+      decrease.addEventListener("click",decreaseonClick);
+    </script>
+  </body>
+</html>
+
